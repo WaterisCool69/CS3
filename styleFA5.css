@@ -1,0 +1,20 @@
+header {
+	background-color: #D3D3D3;
+	 margin: 0px;
+}
+
+body {
+text-align: center;
+margin-left: 12.5%;
+margin-right: 12.5%;
+width: 75%;
+border-color: blue;
+border-style: solid;
+}
+
+footer {
+	background-color: #D3D3D3;
+}
+p {
+font-family: "Monaco", monospace;
+}
