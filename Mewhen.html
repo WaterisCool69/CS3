@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="author" content="Alimbzar, Ali Andrei H.">
+	<meta name="description" content="FA6_Alimbzar.html">
+	<meta name="keywords" content"HTML">
+	<title>Alimbzar, Ali Andrei H.</title>
+	
+	<style>
+		
+			a.First2:link {
+			background-color: blue;
+			text-decoration: none;
+			padding: 10px;
+			font-size: 30px;
+			margin: 10px;
+			border: outset white 3px;
+			}
+			a.First2:visited {
+			background-color: yellow;
+			color: white;
+			border: outset white 3px;
+			}
+			a.First2:hover {
+			background-color: red;
+			color: purple;
+			border: outset white 3px;
+			}
+			a.First2:active {
+			background-color: black;
+			color: green;
+			border: outset white 3px;
+			}
+			a.Second:link {
+			background-color: pink;
+			text-decoration: none;
+			padding: 10px;
+			font-size: 30px;
+			border: outset white 3px;
+			}
+			a.Second:visited {
+			background-color: red;
+			color: yellow;
+			border: outset white 3px;
+			}
+			a.Second:hover {
+			background-color: pink;
+			color: lightblue;
+			border: outset white 3px;
+			}
+			a.Second:active {
+			background-color: blue;
+			color: darkblue;
+			border: outset white 3px;
+			}
+			.First div{
+			border: solid black 1px;
+			width: 150px;
+			height: 150px;
+			margin-top: 30px;
+			margin-left: 10px;
+			}
+			div:target#div{
+			display: block;
+			border: solid black 1px;
+			background-color: darkblue;
+			color: white;
+			}
+			div:target#div2{
+			display: block;
+			border: dotted green 10px;
+			background-color: lightblue;
+			color: white;
+			}
+			body {
+			padding: 20px;
+			}
+	</style>
+</head>
+<body>
+	<div class="First">
+		<a class="First2" href="#div" target="_self">
+			First link
+		</a>
+		<a class="Second" href="#div2" target="_self">
+			Second link
+		</a>
+		<div id="div">
+			<h2>Div 1 here</h2>
+		</div>
+		<div id="div2">
+			<h2>Div 2 here</h2>
+		</div>
+	</body>
+</html>
+
