@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Coin Toss Simulator</title>
+  </head>
+  <body>
+    <h3><span id="result"></span></h3>
+    <button id="coin">Toss a Coin</button>
+
+    <script>
+      const tossBtn = document.getElementById("coin");
+      const resultSpan = document.getElementById("result");
+
+      tossBtn.addEventListener("click", function() {
+        const result = Math.random();
+        const coin = (result < 0.5) ? "heads" : "tails";
+        resultSpan.innerHTML = coin;
+      });
+    </script>
+  </body>
+</html>
