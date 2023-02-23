@@ -16,10 +16,10 @@
   <img id = "Image1" src ="Image1.jpg"></img>
     <script>
 	  function first() {
-	   document.getElementById('Image1').src = "Image1.jpg";
+	   document.getElementById('Image1').src = "Image1.jpeg";
 	   }
 	  function second() {
-	   document.getElementById('Image2').src = "Image2.jpeg";
+	   document.getElementById('Image2').src = "Image2.jpg";
 	   }
 	   
 	 </script>
