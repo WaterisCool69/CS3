@@ -2,11 +2,11 @@
  <html>
   <head>
  </head>
-  <body onload = "two()">
+  <body onload = "Why()">
     <script>
 	function second() {
 	  alert("You will be redirected to the second page");
-	  window.open("second.html")
+	  window.open("Why.html")
 	  }
    </script>
    </body>
