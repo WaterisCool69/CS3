@@ -1,0 +1,27 @@
+<DOCTYPE html>
+ <html>
+  <head>
+   <style>
+		img{
+			height:500px;
+			width:450px;
+			}
+    </style>
+   </head>
+  <body>
+
+  <button type = "button" onclick="first()">Image1</button>
+  <button type = "button" onclick="second()">Image2</button>
+  <br>
+  <img id = "Image1" src ="Image1.jpg"></img>
+    <script>
+	  function first() {
+	   document.getElementById('Image1').src = "Image1.jpg";
+	   }
+	  function second() {
+	   document.getElementById('Image2').src = "Image2.jpeg";
+	   }
+	   
+	 </script>
+   </body>
+  </html>
