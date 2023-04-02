@@ -1,15 +1,7 @@
-CS3/SA5_LithiumAlberto.html
-@MqCream
-MqCream Add files via upload
-Latest commit c69b3b3 last week
- History
- 1 contributor
-77 lines (74 sloc)  2.63 KB
-
 <!DOCTYPE html>
 <html>
 <head>
-	<title> My Online Shop</title>
+	<title>Online Shop</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>
@@ -18,61 +10,52 @@ Latest commit c69b3b3 last week
 	</style>
 </head>
 <body>
-	<h1> Welcome to Yes Online Shop </h1>
-	<h2> Please select from the following items </h2>
-	<!--- provide your own 3 items and their prices in the list --->
+	<h1> Online Shop</h1>
+	<h2> Select an Item </h2>
 	<ol>
-		<li> ako price: 100.00 </li>
-		<li> siya price: 250.00 </li>
-		<li> pagmamahal price: 300.00 </li>
+		<li> Water: 100.00 </li>
+		<li> Food: 500.00 </li>
+		<li> Napkins: 700.00 </li>
 	</ol>
-	<!-- the following will be used to display purchase information -->
     <p> Item selected : <span id="item"> </span> </p>
-	<p> Qty bought : <span id="qty"> </span> </p>
-	<p> Amount to pay for the item: <span id="bill"> </span> </p>
+	<p> Amount bought : <span id="qty"> </span> </p>
+	<p> Price for the item: <span id="bill"> </span> </p>
 	<p> Current Total Bill <span id="tbill">0.00</span> </p>
 	<button onclick="buyItem()"> Buy an Item </button>
 	<button onclick="clearBill()"> Clear </button>
     
     <script>
-    	/* Define function for buy an item button */
     	function buyItem() {
-    		// Get user input for item# and qty
-    		var itemNo = prompt("Please enter item# (1-3): ");
-    		var qty = prompt("Please enter the quantity: ");
-    		// Validate qty as integer
+    		var itemNo = prompt("Enter item number: ");
+    		var qty = prompt("Enter Item amount: ");
     		if (isNaN(qty) || qty.trim() === "") {
-    			alert("Invalid quantity. Please enter a valid integer number.");
+    			alert("Please enter a number.");
     			return;
     		}
     		qty = parseInt(qty);
-    		// Get item price and calculate amount to pay
     		var price;
     		switch (itemNo) {
     			case "1":
     				price = 100.00;
     				break;
     			case "2":
-    				price = 250.00;
+    				price = 500.00;
     				break;
     			case "3":
-    				price = 300.00;
+    				price = 700.00;
     				break;
     			default:
-    				alert("Invalid item#. Please enter a number between 1-3.");
+    				alert("That item does not exist.");
     				return;
     		}
     		var amountToPay = qty * price;
-    		// Display purchase information
     		document.getElementById("item").innerHTML = "Item#" + itemNo;
     		document.getElementById("qty").innerHTML = qty;
     		document.getElementById("bill").innerHTML = amountToPay.toFixed(2);
-    		// Update current total bill
     		var currentTotalBill = parseFloat(document.getElementById("tbill").innerHTML);
     		document.getElementById("tbill").innerHTML = (currentTotalBill + amountToPay).toFixed(2);
     	}
     	
-    	/* Define function for clear button */
     	function clearBill() {
     		document.getElementById("item").innerHTML = "";
     		document.getElementById("qty").innerHTML = "";
