@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Multiplication Table Generator</title>
+	<style>
+		table, td {
+			border: 1px solid black;
+			font-size: 20px;
+			padding: 10px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<p>[enter a num from 2-10]</p>
+	<br>
+	<input type="text" id="rownumber">
+	<label for="columnnumber"> by </label>
+	<input type="text" id="columnnumber">
+	<br>
+	<button onclick="generateTable()"> click here! </button>
+		<div id="output"></div>
+		
+		<script>
+			function generateTable() {
+				
+				var rownumber = parseInt(document.getElementById("rownumber").value);
+				var columnnumber = parseInt(document.getElementById("columnnumber").value);
+
+			if (rownumber < 2 || columnnumber > 10 || rownumber > 10 || columnnumber < 2) {
+				alert("only from 2 and 10");
+				return;
+			}
+
+			var table = "<table>";
+			for (var i = 1; i <= rownumber; i++) {
+				table += "<tr>";
+				for (var j = 1; j <= columnnumber; j++) {
+					table += "<td>" + (j * i) + "</td>";
+				}
+				table += "</tr>";
+			}
+			table += "</table>";
+
+			document.getElementById("output").innerHTML = table;
+		}
+	</script>
+</body>
+</html>
