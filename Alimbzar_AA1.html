@@ -1,0 +1,144 @@
+
+<html>
+    <head>
+    <title> AA1 </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            let mrna = prompt("Enter the mrna sequence:");
+            const startCodon = "AUG";
+          const stopCodons = ["UAA", "UAG", "UGA"];
+            let startIndex = mrna.indexOf(startCodon);
+            let readingFrame = mrna.slice(startIndex);
+            let Codons = [];
+            for (let i = 0; i < readingFrame.length; i += 3) {
+                let Codon = readingFrame.slice(i, i + 3);
+                Codons.push(Codon);
+            if (stopCodons.includes(Codon)) {
+            break;
+  }
+}
+            let Amino = [];
+                for (let Codon of Codons) {
+                switch (Codon) {
+                    case "AUG":
+                        Amino.push("Met");
+                        break;
+                    case "UUU":
+                    case "UUC":
+                        Amino.push("Phe");
+                        break;
+						              case "GUU":
+                    case "GUC":
+                    case "GUA":
+                    case "GUG":
+                        Amino.push("Val");
+                        break;
+                    case "UCU":
+                    case "UCC":
+                    case "UCA":
+                    case "UCG":
+                    case "AGU":
+                    case "AGC":
+                        Amino.push("Ser");
+                        break;
+						                    case "ACU":
+                    case "ACC":
+                    case "ACA":
+                    case "ACG":
+                        Amino.push("Thr");
+                        break;
+                    case "GCU":
+                    case "GCC":
+                    case "GCA":
+                    case "GCG":
+                        Amino.push("Ala");
+                        break;
+                    case "UAU":
+                    case "UAC":
+                        Amino.push("Tyr");
+                        break;
+                    case "CAU":
+                    case "CAC":
+                        Amino.push("His");
+                        break;
+                    case "CAA":
+                    case "CAG":
+                        Amino.push("Gln");
+                        break;
+                    case "AAU":
+                    case "AAC":
+                        Amino.push("Asn");
+                        break;
+                    case "AAA":
+                    case "AAG":
+                        Amino.push("Lys");
+                        break;
+                    case "GAU":
+                    case "GAC":
+                        Amino.push("Asp");
+                        break;
+                    case "GAA":
+                    case "GAG":
+                        Amino.push("Glu");
+                        break;
+                    case "UGU":
+                    case "UGC":
+                        Amino.push("Cys");
+                        break;
+                    case "UGG":
+                        Amino.push("Trp");
+                        break;
+                    case "CGU":
+                    case "CGC":
+                    case "CGA":
+                    case "CGG":
+                        Amino.push("Arg");
+                        break;
+                    case "AGA":
+                    case "AGG":
+                        Amino.push("Arg");
+                        break;
+                    case "GGU":
+                    case "GGC":
+                    case "GGA":
+                    case "GGG":
+                        Amino.push("Gly");
+                        break;
+                    case "CCU":
+                    case "CCC":
+                    case "CCA":
+                    case "CCG":
+                        Amino.push("Pro");
+                        break;
+                    case "UAA":
+                    case "UAG":
+                    case "UGA":
+                        Amino.push("STOP");
+                        break;
+                    case "UUA":
+                    case "UUG":
+                    case "CUU":
+                    case "CUC":
+                    case "CUA":
+                    case "CUG":
+                        Amino.push("Leu");
+                        break;
+                    case "AUU":
+                    case "AUC":
+                    case "AUA":
+                        Amino.push("Ile");
+                        break;
+      
+  }
+}
+
+           document.write("<p>[" + Codons.join(", ") + "]</p>");
+   for (let i = 0; i < Codons.length; i++) {
+            document.write("<p>" + Codons[i] + " --> " + Amino[i] + "</p>");
+}
+        </script>
+    </body>
+</html>
