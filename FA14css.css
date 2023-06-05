@@ -1,0 +1,135 @@
+
+:root {
+  --form-primary-highlight: #95a4ff;
+  --form-secondary-highlight: #ffc8ff;
+  --font-size: 14pt;
+  --font-face: 'Roboto';
+  --font-color: #2A293E;
+}
+
+body {
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  font-family: var(--font-face);
+  color: var(--font-color);
+}
+
+legend {
+    text-align: center;
+}
+
+form {
+  padding: 50px 100px;
+  border: 2px solid black;
+  width: 100%;
+  max-width: 500px;
+  margin: 50px 0;
+}
+
+fieldset {
+	border: none;
+	padding: 0;
+}
+
+legend {
+	font-weight: bold;
+	font-size: 24px;
+}
+
+label {
+	display: block;
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+input[type="text"], input[type="password"], select, textarea {
+	display: block;
+    width: 100%;
+    font-size: var(--font-size);
+    line-height: calc(var(--font-size) * 2);
+    font-family: var(--font-face);
+    margin-bottom: calc(var(--font-size) * 2);
+    border: none;
+    border: 2px solid black;
+    background: var(--form-bg);
+    min-width: 250px;
+    padding-left: 5px;
+    outline: none;
+    transition: border-bottom .2s ease-in-out;
+    color: rgba(0,0,0,1);
+}
+
+input[type="email"] {
+	display: block;
+    width: 100%;
+    font-size: var(--font-size);
+    line-height: calc(var(--font-size) * 2);
+    font-family: var(--font-face);
+    margin-bottom: calc(var(--font-size) * 2);
+    border: none;
+    border: 2px solid black;
+    background: var(--form-bg);
+    min-width: 250px;
+    padding-left: 5px;
+    outline: none;
+    color: rgba(0,0,0,1);
+}
+
+textarea {
+    height: 100px;
+}
+
+button[type="submit"],
+button[type="reset"] {
+    display: inline-block;
+    margin: 0 auto;
+    line-height: calc(var(--font-size) * 2);
+    padding: 0 20px;
+    background: var(--form-shadow);
+    letter-spacing: 2px;
+    transition: .2s all ease-in-out;
+    outline: none;
+    border: 1px solid black;
+    font-size: var(--font-size);
+    font-family: var(--font-face);
+}
+
+button[type="reset"] {
+	font-color: blue;
+    margin-left: 10px;
+}
+
+button[type="submit"] {
+	font-color: blue;
+    margin-right: 10px;
+}
+
+button[type="submit"]:hover,
+button[type="reset"]:hover {
+    background: black;
+    color: white;
+}
+    
+#output {
+    padding: 50px 100px;
+    border: 2px solid black;
+    max-width: 600px;
+    margin: 50px auto;
+    border-radius: 5px;
+    display:none;
+    }
+    
+.valid {
+    border: 2px solid #00FF00 !important;
+
+    }
+    
+.invalid {
+    border: 2px solid #FF0000 !important;
+    }
+
+  
